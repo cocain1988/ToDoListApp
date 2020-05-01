@@ -5,10 +5,19 @@ import java.util.Date;
 public class Task {
     private String TaskName;
     private boolean Status;
+    private boolean Star;
     private Date RemindDate;
     private Date RunDate;
     private boolean Repeat;
     private String GlobalDescription;
+
+    public boolean isStar() {
+        return Star;
+    }
+
+    public void setStar(boolean star) {
+        Star = star;
+    }
 
     public String getTaskName() {
         return TaskName;

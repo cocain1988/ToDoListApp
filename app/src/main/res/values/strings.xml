@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ToDoListApp</string>
+    <string name="discribe_task">Описание задачи</string>
 </resources>
