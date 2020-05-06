@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/fragmentContainer"
@@ -11,6 +11,7 @@
 
     <LinearLayout
         android:id="@+id/topPanel"
+        app:layout_constraintTop_toTopOf="parent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
@@ -30,6 +31,9 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/task_buttons"
+        app:layout_constraintTop_toBottomOf="@+id/topPanel"
+        app:layout_constraintStart_toEndOf="@+id/topPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -43,12 +47,30 @@
             android:id="@+id/RemindDateButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
         <Button
             android:id="@+id/RepeatButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/task_global_text"
+        app:layout_constraintTop_toBottomOf="@+id/task_buttons"
+        app:layout_constraintStart_toEndOf="@+id/task_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/description"
+            android:lines="4"
+            android:hint="@string/global_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 
 
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
